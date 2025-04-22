@@ -1,16 +1,38 @@
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();  // Prevent form submission to the server
+// Smooth scrolling for navigation links
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
   
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
   
-    if (name && email) {
-      alert('Thank you for contacting us, ' + name + '! We will get back to you shortly.');
-    } else {
-      alert('Please fill out both fields.');
-    }
-  
-    // Clear the form after submission
-    document.getElementById('contactForm').reset();
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 50,
+          behavior: 'smooth'
+        });
+      }
+    });
   });
   
+  // Add active class to nav links based on scroll position
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+  
+    let currentSection = '';
+  
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+  
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(currentSection)) {
+        link.classList.add('active');
+      }
+    });
+  });

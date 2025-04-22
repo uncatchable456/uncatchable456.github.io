@@ -3,43 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="My GitHub Pages Website">
-  <title>My GitHub Pages Site</title>
-  <!-- Link to the external CSS file -->
+  <meta name="description" content="A wonderful GitHub-inspired website">
+  <title>GitHub Inspired Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">GitHub<span class="highlight">Inspired</span></a>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>This is a simple website created using GitHub Pages. It's static and doesn't require a server.</p>
+  <section class="hero">
+    <div class="container">
+      <h1>Build, Share, Collaborate</h1>
+      <p>Your projects deserve a home where innovation thrives.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <button type="submit">Submit</button>
-    </form>
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Why Choose Us?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Version Control</h3>
+          <p>Track every change with Git integration.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Collaboration</h3>
+          <p>Work seamlessly with your team.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Open Source</h3>
+          <p>Contribute to or host open-source projects.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 My GitHub Pages Site</p>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We are passionate about helping developers build amazing things. Whether you're a solo developer or part of a large team, we've got the tools you need.</p>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <p>&copy; 2023 GitHub Inspired. All rights reserved.</p>
+      <p>Contact us at: <a href="mailto:info@githubinspired.com">info@githubinspired.com</a></p>
+    </div>
   </footer>
 
-  <!-- Link to the external JavaScript file -->
   <script src="app.js"></script>
 </body>
 </html>
