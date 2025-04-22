@@ -79,28 +79,57 @@
     font-size: 1rem;
   }
   
-  .features {
+  .about {
     padding: 3rem 0;
     text-align: center;
   }
   
-  .feature-grid {
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .profile-pic {
+    border-radius: 10px;
+    max-width: 100%;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .project-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .skill-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
   
-  .feature-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about {
+  .contact {
     padding: 3rem 0;
     text-align: center;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
   .footer {
@@ -110,7 +139,12 @@
     padding: 1rem 0;
   }
   
-  .footer a {
-    color: #ff6b35;
-    text-decoration: none;
+  .social-links {
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
   }
